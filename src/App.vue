@@ -1,28 +1,45 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+  <div class="chat">
+    <chat-head></chat-head>
+    <chat-body></chat-body>
+    <chat-foot></chat-foot>
   </div>
+  <!-- <group-info></group-info> -->
 </template>
 
 <script>
-import Hello from './components/Hello'
+import ChatHead from './components/ChatHead'
+import ChatBody from './components/ChatBody'
+import ChatFoot from './components/ChatFoot'
+import GroupInfo from './components/GroupInfo'
 
 export default {
-  name: 'app',
   components: {
-    Hello
+    ChatHead,
+    ChatBody,
+    ChatFoot,
+    GroupInfo
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+*{
+  margin: 0;
+  padding: 0;
 }
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+.chat{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
 </style>
